@@ -12,14 +12,14 @@ class LinkedList {
   }
 
   getSize() {
-    let i = 0
-    let current = this.head
-    while (current != null) {
-      i++
-      current = current.next
-    }
-    this.size = i
-    return i
+    // let i = 0
+    // let current = this.head
+    // while (current != null) {
+    //   i++
+    //   current = current.next
+    // }
+    // this.size = i
+    return this.size
   }
 
   getFirst() {
@@ -60,7 +60,7 @@ class LinkedList {
     let prev = null
 
     while (current != null) {
-      if (current.data === key) {
+      if (current.data.key === key) {
         if (prev == null) {
           this.head = current.next
         }
@@ -80,7 +80,7 @@ class LinkedList {
     let current = this.head
 
     while (current != null) {
-      if (current.data == key) {
+      if (current.data.key == key) {
         return current.data
       }
       else {
