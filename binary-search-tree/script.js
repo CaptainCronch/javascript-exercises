@@ -18,9 +18,19 @@ class BinarySearchTree {
             current_node = new Node(element)
             this.size++
         } else if (element > current_node.element) {
+            if (!current_node.right){
+                current_node.right = new Node(element)
+                this.size++
+                return
+            }
             // if there is an element here and the current one is larger, move to the right subtree
             this.insert(element, current_node.right)
         } else {
+            if (!current_node.left){
+                current_node.left = new Node(element)
+                this.size++
+                return
+            }
             // else move to the left subtree (element is smaller or equal to)
             this.insert(element, current_node.left)
         }
