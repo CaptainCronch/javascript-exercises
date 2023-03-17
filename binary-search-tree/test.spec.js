@@ -8,10 +8,14 @@ describe("search", () => {
         expect(tree.length()).toEqual(3)
     })
 
-    tree.remove(5)
+    let remove_tree = new BinarySearchTree
+    remove_tree.insert(10)
+    remove_tree.insert(5)
+    remove_tree.insert(0)
+    remove_tree.remove(5)
 
     it("should have size 2 after removing 1 time", () => {
-        expect(tree.length()).toEqual(2)
+        expect(remove_tree.length()).toEqual(2)
     })
 
     it("should be able to find a node", () => {

@@ -13,9 +13,9 @@ class BinarySearchTree {
     }
 
     insert(element, current_node = this.root) { // should never fail ever ever
-        if (!current_node){
+        if (!this.root){
             // if there's no element here, make one (function ends)
-            current_node = new Node(element)
+            this.root = new Node(element)
             this.size++
         } else if (element > current_node.element) {
             if (!current_node.right){
